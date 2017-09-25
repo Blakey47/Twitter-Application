@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8053700B8C1A486434A82281 /* Pods_TwitterLBTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAB07A447BF86FBD64D5994 /* Pods_TwitterLBTA.framework */; };
 		A7B50A421F78FBE800F2770B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B50A411F78FBE800F2770B /* AppDelegate.swift */; };
 		A7B50A491F78FBE800F2770B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B50A481F78FBE800F2770B /* Assets.xcassets */; };
 		A7B50A4C1F78FBE900F2770B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B50A4A1F78FBE900F2770B /* LaunchScreen.storyboard */; };
@@ -14,12 +15,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33595B1B417194F1E1496E8D /* Pods-TwitterLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterLBTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA.release.xcconfig"; sourceTree = "<group>"; };
+		41AC779A6F4C6315497256EF /* Pods-TwitterLBTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterLBTA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA.debug.xcconfig"; sourceTree = "<group>"; };
 		A7B50A3E1F78FBE800F2770B /* TwitterLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B50A411F78FBE800F2770B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7B50A481F78FBE800F2770B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7B50A4B1F78FBE900F2770B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A7B50A4D1F78FBE900F2770B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7B50A531F78FD9C00F2770B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		CCAB07A447BF86FBD64D5994 /* Pods_TwitterLBTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitterLBTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8053700B8C1A486434A82281 /* Pods_TwitterLBTA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				A7B50A401F78FBE800F2770B /* TwitterLBTA */,
 				A7B50A3F1F78FBE800F2770B /* Products */,
+				C93D048665C2DE4C3B215AD6 /* Pods */,
+				F51139B54A6C44E4CAE44A57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +68,23 @@
 			path = TwitterLBTA;
 			sourceTree = "<group>";
 		};
+		C93D048665C2DE4C3B215AD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41AC779A6F4C6315497256EF /* Pods-TwitterLBTA.debug.xcconfig */,
+				33595B1B417194F1E1496E8D /* Pods-TwitterLBTA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F51139B54A6C44E4CAE44A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAB07A447BF86FBD64D5994 /* Pods_TwitterLBTA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7B50A501F78FBE900F2770B /* Build configuration list for PBXNativeTarget "TwitterLBTA" */;
 			buildPhases = (
+				3C301BEE4357FA18D5691724 /* [CP] Check Pods Manifest.lock */,
 				A7B50A3A1F78FBE800F2770B /* Sources */,
 				A7B50A3B1F78FBE800F2770B /* Frameworks */,
 				A7B50A3C1F78FBE800F2770B /* Resources */,
+				CDEB42945E3E00EDFC85F82E /* [CP] Embed Pods Frameworks */,
+				340FCE2761FB773FDF7908DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,6 +153,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		340FCE2761FB773FDF7908DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C301BEE4357FA18D5691724 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwitterLBTA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDEB42945E3E00EDFC85F82E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/LBTAComponents/LBTAComponents.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LBTAComponents.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A7B50A3A1F78FBE800F2770B /* Sources */ = {
@@ -260,6 +341,7 @@
 		};
 		A7B50A511F78FBE900F2770B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AC779A6F4C6315497256EF /* Pods-TwitterLBTA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -274,6 +356,7 @@
 		};
 		A7B50A521F78FBE900F2770B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33595B1B417194F1E1496E8D /* Pods-TwitterLBTA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
