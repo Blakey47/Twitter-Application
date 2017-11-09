@@ -26,20 +26,22 @@ class UserCell: DatasourceCell {
     
     override var datasourceItem: Any? {
         didSet {
-            nameLabel.text = datasourceItem as? String
+//            nameLabel.text = datasourceItem as? String
         }
     }
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
+        imageView.image = #imageLiteral(resourceName: "profile_image")
+        imageView.layer.cornerRadius = 5
+        imageView.layer.masksToBounds = true
         return imageView
     }()
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "TEST TEST TEST"
-        label.backgroundColor = .green
+        label.text = "Darragh Blake"
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
