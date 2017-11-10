@@ -28,7 +28,7 @@ class HomeDatasourceController: DatasourceController {
     
     // Placing the footer on the screen
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
+        return CGSize(width: view.frame.width, height: 50)
     }
     
     
