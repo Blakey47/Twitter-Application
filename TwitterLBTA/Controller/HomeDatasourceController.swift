@@ -9,6 +9,7 @@
 import LBTAComponents
 
 class HomeDatasourceController: DatasourceController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -16,9 +17,27 @@ class HomeDatasourceController: DatasourceController {
         self.datasource = homeDatasource
     }
     
+    // Collapses the gap between each user cell. Can be seen more clear if .backgroundColor is changed
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     // Adjusting the size of the cells
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+            
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 12 - 2
+            let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+            let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)]
+            
+            // Let's get get an estimation of the height of our cell based on user.bioText
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+        }
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     // Placing the header on the screen
